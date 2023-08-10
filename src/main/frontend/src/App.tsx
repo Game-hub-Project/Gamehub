@@ -1,3 +1,6 @@
+import Router from "@/Router";
+import GlobalStyle from "./styles/GlobalStyle";
+
 function App() {
   // useEffect(() => {
   //   fetch("/api/hello")
@@ -6,7 +9,12 @@ function App() {
   //     .catch((error) => console.log(error));
   // }, []);
 
-  return <>백엔드에서 가져온 데이터입니다 :</>;
+  return (
+    <div className="app">
+      <GlobalStyle />
+      <Router />
+    </div>
+  );
 }
 
 export default App;

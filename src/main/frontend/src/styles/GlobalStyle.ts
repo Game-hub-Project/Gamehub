@@ -58,7 +58,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
+    --color-main: #FF9900;
 
+    --color-gray: #bfbfbf;
+    --color-gray-light: #e7e7e7;
   }
 `;
 
