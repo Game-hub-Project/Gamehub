@@ -54,14 +54,18 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body{
-    font-family: Noto Sans KR;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 
   :root {
     --color-main: #FF9900;
 
     --color-gray: #bfbfbf;
-    --color-gray-light: #e7e7e7;
+    --color-gray-2: #9fa1a7;
+    --color-gray-3: #ffffff99;
+    --color-gray-light: #f8f9fa;
+
+    --color-black-light: #222426;
   }
 `;
 
