@@ -21,7 +21,7 @@ const FooterStyle = styled.footer`
   width: 100%;
   height: 100px;
   padding: 10px;
-  color: var(--color-gray-3);
+  color: var(--color-gray-light-2);
   font-size: 12px;
   font-weight: 100;
   background-color: var(--color-black-light);
