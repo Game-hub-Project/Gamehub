@@ -1,7 +1,7 @@
 // import { styled } from "styled-components";
 
-import Category from "@/components/main/CategoryList";
-import ChatList from "@/components/main/ChatList";
+import Category from "@/components/home/CategoryList";
+import ChatList from "@/components/home/ChatList";
 
 const HomePage = () => {
   return (
