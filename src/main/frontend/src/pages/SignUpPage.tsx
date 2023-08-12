@@ -1,10 +1,10 @@
 import FormButton from "@/components/common/FormButton";
 import FormFiled from "@/components/common/FormField";
-import { styled } from "styled-components";
+import PageTitle from "@/components/common/PageTitle";
 
 const SignUpPage = () => {
   return (
-    <div>
+    <>
       <PageTitle>회원가입</PageTitle>
       <FormFiled label="이름" name="name" type="text" />
       <FormFiled label="닉네임" name="nickname" type="text" />
@@ -14,16 +14,8 @@ const SignUpPage = () => {
       <FormFiled label="전화번호" name="phoneNumber" type="tel" />
 
       <FormButton type="button">가입하기</FormButton>
-    </div>
+    </>
   );
 };
 
 export default SignUpPage;
-
-const PageTitle = styled.h1`
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--color-main);
-  margin: 30px 0;
-`;
