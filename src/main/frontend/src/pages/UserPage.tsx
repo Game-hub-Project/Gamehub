@@ -1,28 +1,18 @@
-import FormButton from "@/components/common/FormButton";
 import FormFiled from "@/components/common/FormField";
-import PageTitle from "@/components/common/PageTitle";
+import { SpaceLine } from "@/components/user/Line";
+import EditProfileImage from "@/components/user/EditProfileImage";
+import FormButton from "@/components/common/FormButton";
 
-const SignUpPage = () => {
+const UserPage = () => {
   return (
     <>
-      <PageTitle>회원가입</PageTitle>
-      <FormFiled
-        label="이름"
-        name="name"
-        type="text"
-        placeholder="2글자 이상"
-      />
+      <EditProfileImage />
+      <SpaceLine />
       <FormFiled
         label="닉네임"
         name="nickname"
         type="text"
         placeholder="2글자 이상"
-      />
-      <FormFiled
-        label="이메일"
-        name="email"
-        type="email"
-        placeholder="email@email.com"
       />
       <FormFiled
         label="비밀번호"
@@ -43,9 +33,9 @@ const SignUpPage = () => {
         placeholder="01011112222"
       />
 
-      <FormButton type="button">가입하기</FormButton>
+      <FormButton>수정하기</FormButton>
     </>
   );
 };
 
-export default SignUpPage;
+export default UserPage;

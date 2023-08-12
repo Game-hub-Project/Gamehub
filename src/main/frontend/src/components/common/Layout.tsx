@@ -45,4 +45,5 @@ const LayoutStyle = styled.div`
 const Main = styled.main`
   padding: 10px;
   min-height: 700px;
+  position: relative;
 `;
