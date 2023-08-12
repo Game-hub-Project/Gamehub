@@ -17,13 +17,14 @@ interface Props {
     | "passwordConfirm"
     | "phoneNumber";
   type: "text" | "email" | "password" | "tel";
+  placeholder: string;
 }
 
-const FormFiled = ({ label, name, type }: Props) => {
+const FormFiled = ({ label, name, type, placeholder }: Props) => {
   return (
     <Wrap>
       <Label htmlFor={name}>{label}</Label>
-      <Input type={type} name={name} id={name} />
+      <Input type={type} name={name} id={name} placeholder={placeholder} />
     </Wrap>
   );
 };
