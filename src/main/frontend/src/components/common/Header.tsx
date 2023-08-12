@@ -1,12 +1,18 @@
 import { styled } from "styled-components";
 import { ReactComponent as LeftArrowIcon } from "@/assets/LeftArrowIcon.svg";
 import { ReactComponent as UserIcon } from "@/assets/UserIcon.svg";
+import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <HeaderStyle>
-      <LeftArrowIcon />
-      <Logo src="img/logo.png" />
-      <UserIcon />
+      <LeftArrowIcon onClick={() => navigate(-1)} />
+      <Link to="/">
+        <Logo src="img/logo.png" />
+      </Link>
+      <Link to="/user">
+        <UserIcon />
+      </Link>
     </HeaderStyle>
   );
 };
