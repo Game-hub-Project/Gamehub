@@ -1,10 +1,10 @@
+import { useState } from "react";
+import { LoginValidate } from "@/utils/validate";
 import FormButton from "@/components/common/FormButton";
 import FormFiled from "@/components/common/FormField";
 import PageTitle from "@/components/common/PageTitle";
-import ValidErrorMessage from "@/components/common/ValidErrorMessage";
 import SignUpLink from "@/components/login/SignUpLink";
-import { LoginValidate } from "@/utils/validate";
-import { useState } from "react";
+import ValidErrorMessage from "@/components/common/ValidErrorMessage";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +23,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <>
       <PageTitle>로그인</PageTitle>
       <FormFiled
         name="email"
@@ -45,7 +45,7 @@ const LoginPage = () => {
         로그인 하기
       </FormButton>
       <SignUpLink />
-    </div>
+    </>
   );
 };
 

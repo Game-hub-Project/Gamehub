@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { CategoryList } from "./home.style";
 
 const Category = () => {
   return (
@@ -17,19 +17,3 @@ const Category = () => {
 };
 
 export default Category;
-
-const CategoryList = styled.ul`
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  margin: auto;
-  padding: 10px;
-  font-size: 15px;
-  font-weight: 300;
-
-  li {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;

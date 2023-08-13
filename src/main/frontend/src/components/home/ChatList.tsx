@@ -1,22 +1,15 @@
-import { styled } from "styled-components";
 import ChatListItem from "./ChatListItem";
+import { ChatListStyle } from "./home.style";
 
 const ChatList = () => {
   const array = Array(12).fill(0);
   return (
-    <List>
+    <ChatListStyle>
       {array.map((item, index) => (
         <ChatListItem key={index} />
       ))}
-    </List>
+    </ChatListStyle>
   );
 };
 
 export default ChatList;
-
-const List = styled.ul`
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  gap: 10px;
-`;

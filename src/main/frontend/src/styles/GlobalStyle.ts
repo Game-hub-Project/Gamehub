@@ -49,8 +49,14 @@ const GlobalStyle = createGlobalStyle`
     color: #000;
     text-decoration: none;
   }
+
+  label{
+    cursor: pointer;
+  }
+
   button {
     background: none;
+    cursor: pointer;
   }
   
   *{
@@ -59,13 +65,15 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     --color-main: #ff9900;
-    --color-sub: #ffba6a;
+    --color-sub: #ffaa42;
+    --color-sub-2: #ffcb8f;
 
     --color-gray: #bfbfbf;
     --color-gray-2: #9fa1a7;
 
     --color-gray-light: #f8f9fa;
     --color-gray-light-2: #ffffff99;
+    --color-gray-light-3: #d1d1d1;
 
     --color-black-light: #222426;
 

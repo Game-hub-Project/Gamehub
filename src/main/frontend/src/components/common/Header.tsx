@@ -1,7 +1,8 @@
+import { Link, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { ReactComponent as LeftArrowIcon } from "@/assets/LeftArrowIcon.svg";
 import { ReactComponent as UserIcon } from "@/assets/UserIcon.svg";
-import { Link, useNavigate } from "react-router-dom";
+
 const Header = () => {
   const navigate = useNavigate();
   return (
@@ -30,6 +31,10 @@ const HeaderStyle = styled.header`
   text-align: center;
   padding: 10px 30px;
   z-index: 10;
+
+  svg {
+    cursor: pointer;
+  }
 `;
 
 const Logo = styled.img`

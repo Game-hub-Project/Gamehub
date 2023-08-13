@@ -22,3 +22,10 @@ export type userKey =
   | "password"
   | "confirmPassword"
   | "phone";
+
+export interface editUserInfo {
+  nickname: string;
+  password: string;
+  confirmPassword: string;
+  phone: string;
+}

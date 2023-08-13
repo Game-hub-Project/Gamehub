@@ -1,4 +1,4 @@
-import { userInfo } from "@/types";
+import { editUserInfo, userInfo } from "@/types";
 
 export const LoginValidate = (
   email: string,
@@ -40,6 +40,38 @@ export const SignupValidate = (
   // 이메일 유효성 평가
   if (emailValidate(email)) {
     serValidateError(errors.email);
+    return;
+  }
+
+  // 비밀번호 유효성 평가
+  if (PasswordValidate(password)) {
+    serValidateError(errors.password);
+    return;
+  }
+
+  // 비밀번호 확인 유효성 평가
+  if (confirmPasswordValidate(confirmPassword, password)) {
+    serValidateError(errors.confirmPassword);
+    return;
+  }
+
+  // 전화번호 유효성 평가
+  if (phonedValidate(phone)) {
+    serValidateError(errors.phone);
+    return;
+  }
+  serValidateError("");
+};
+
+export const EditUserInfoValidate = (
+  editUserInfo: editUserInfo,
+  serValidateError: React.Dispatch<React.SetStateAction<string>>
+) => {
+  const { nickname, password, confirmPassword, phone } = editUserInfo;
+
+  // 닉네임 유효성 평가
+  if (nameValidate(nickname)) {
+    serValidateError(errors.nickname);
     return;
   }
 

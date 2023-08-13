@@ -10,5 +10,10 @@ const FormButton = styled.button`
   margin: auto;
   margin-top: 60px;
   margin-bottom: 30px;
+  font-weight: 300;
+
+  &:hover {
+    background-color: var(--color-sub);
+  }
 `;
 export default FormButton;
