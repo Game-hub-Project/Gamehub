@@ -1,18 +1,24 @@
 export interface FormFiledProps {
-  label:
-    | "이름"
-    | "닉네임"
-    | "이메일"
-    | "비밀번호"
-    | "비밀번호 확인"
-    | "전화번호";
-  name:
-    | "name"
-    | "nickname"
-    | "email"
-    | "password"
-    | "passwordConfirm"
-    | "phoneNumber";
+  name: userKey;
   type: "text" | "email" | "password" | "tel";
   placeholder: string;
+  value: string;
+  onChange: (value: string, key?: userKey) => void;
 }
+
+export interface userInfo {
+  name: string;
+  nickname: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+  phone: string;
+}
+
+export type userKey =
+  | "name"
+  | "nickname"
+  | "email"
+  | "password"
+  | "confirmPassword"
+  | "phone";
