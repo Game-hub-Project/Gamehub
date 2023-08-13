@@ -1,7 +1,8 @@
+import { Link, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { ReactComponent as LeftArrowIcon } from "@/assets/LeftArrowIcon.svg";
 import { ReactComponent as UserIcon } from "@/assets/UserIcon.svg";
-import { Link, useNavigate } from "react-router-dom";
+
 const Header = () => {
   const navigate = useNavigate();
   return (

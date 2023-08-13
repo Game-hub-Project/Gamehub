@@ -1,8 +1,8 @@
-import { styled } from "styled-components";
-import Input from "./Input";
-import { FormFiledProps, userKey } from "@/types";
 import React from "react";
+import { styled } from "styled-components";
+import { FormFiledProps, userKey } from "@/types";
 import autoHyphen from "@/utils/autoHyphen";
+import Input from "./Input";
 
 const FormFiled = ({
   name,
@@ -12,7 +12,7 @@ const FormFiled = ({
   onChange,
 }: FormFiledProps) => {
   return (
-    <Wrap>
+    <FormFiledStyle>
       <Label htmlFor={name}>{labelText(name)}</Label>
       <Input
         type={type}
@@ -36,13 +36,13 @@ const FormFiled = ({
           onChange(e.target.value, name);
         }}
       />
-    </Wrap>
+    </FormFiledStyle>
   );
 };
 
 export default React.memo(FormFiled);
 
-const Wrap = styled.div`
+const FormFiledStyle = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px 20px;

@@ -1,5 +1,10 @@
 import { ChangeEvent, useState } from "react";
-import { styled } from "styled-components";
+import {
+  ProfileEditor,
+  ProfileImageSection,
+  ProfileImageButton,
+  ImgFile,
+} from "./user.style";
 
 const EditProfileImage = () => {
   const [userProfile, setUserProfile] = useState<string | null>(null);
@@ -27,7 +32,7 @@ const EditProfileImage = () => {
         <div>
           <ProfileImageButton $isChange={true}>
             <label htmlFor="file">사진 변경</label>
-            <File type="file" onChange={fileHandler} id="file" />
+            <ImgFile type="file" onChange={fileHandler} id="file" />
           </ProfileImageButton>
           <ProfileImageButton
             $isChange={false}
@@ -43,45 +48,3 @@ const EditProfileImage = () => {
   );
 };
 export default EditProfileImage;
-
-const ProfileEditor = styled.div`
-  margin: 20px 20px 40px;
-
-  h3 {
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  p {
-    margin-top: 7px;
-    color: var(--color-gray-2);
-    font-weight: 200;
-  }
-`;
-
-const ProfileImageSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 20px 10px;
-
-  img {
-    width: 70px;
-    height: 70px;
-    border-radius: 15px;
-  }
-`;
-
-const ProfileImageButton = styled.button<{ $isChange: boolean }>`
-  font-size: 14px;
-  color: white;
-  border-radius: 8px;
-  padding: 10px 20px;
-  margin: 0 5px;
-  background-color: ${({ $isChange }) =>
-    $isChange ? "var(--color-main)" : "var(--color-gray)"};
-`;
-
-const File = styled.input`
-  display: none;
-`;

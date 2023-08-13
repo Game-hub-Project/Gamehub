@@ -1,10 +1,10 @@
-import FormFiled from "@/components/common/FormField";
-import { SpaceLine } from "@/components/user/Line";
-import EditProfileImage from "@/components/user/EditProfileImage";
-import FormButton from "@/components/common/FormButton";
 import { useCallback, useState } from "react";
 import { userKey, editUserInfo } from "@/types";
 import { EditUserInfoValidate } from "@/utils/validate";
+import FormFiled from "@/components/common/FormField";
+import FormButton from "@/components/common/FormButton";
+import { SpaceLine } from "@/components/user/user.style";
+import EditProfileImage from "@/components/user/EditProfileImage";
 import ValidErrorMessage from "@/components/common/ValidErrorMessage";
 
 const UserPage = () => {

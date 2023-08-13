@@ -1,9 +1,9 @@
-import FormButton from "@/components/common/FormButton";
-import FormFiled from "@/components/common/FormField";
-import PageTitle from "@/components/common/PageTitle";
-import { userInfo, userKey } from "@/types";
 import { useCallback, useState } from "react";
+import { userInfo, userKey } from "@/types";
 import { SignupValidate } from "@/utils/validate";
+import PageTitle from "@/components/common/PageTitle";
+import FormFiled from "@/components/common/FormField";
+import FormButton from "@/components/common/FormButton";
 import ValidErrorMessage from "@/components/common/ValidErrorMessage";
 
 const SignUpPage = () => {

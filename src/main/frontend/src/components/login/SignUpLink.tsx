@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Container, SignUpButton, SignUpMessage } from "./login.style";
 
 const SignUpLink = () => {
   return (
@@ -11,17 +10,3 @@ const SignUpLink = () => {
 };
 
 export default SignUpLink;
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-`;
-
-const SignUpMessage = styled.p``;
-
-const SignUpButton = styled(Link)`
-  color: var(--color-main);
-  margin: 0 10px;
-  text-decoration: underline;
-`;

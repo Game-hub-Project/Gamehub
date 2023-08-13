@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { PostMessageStyle, InputStyle, PostButton } from "./chatting.style";
 
 const PostMessage = () => {
   return (
@@ -10,31 +10,3 @@ const PostMessage = () => {
 };
 
 export default PostMessage;
-
-const PostMessageStyle = styled.div`
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-`;
-
-const InputStyle = styled.textarea`
-  box-sizing: border-box;
-  width: 90%;
-  height: 120px;
-  padding: 10px;
-  border: none;
-  resize: none;
-  font-size: 14px;
-  line-height: 14px;
-  &:focus {
-    outline: none;
-  }
-`;
-
-const PostButton = styled.button`
-  width: 10%;
-  height: 120px;
-  color: white;
-  background-color: var(--color-main);
-`;
