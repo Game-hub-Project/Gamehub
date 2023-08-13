@@ -4,6 +4,7 @@ import Layout from "./components/common/Layout";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
+import ChattingPage from "./pages/ChattingPage";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
           <Route path={"/signup"} element={<SignUpPage />} />
           <Route path={"/login"} element={<LoginPage />} />
           <Route path={"/user"} element={<UserPage />} />
+          <Route path={"/chatting"} element={<ChattingPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

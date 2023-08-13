@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import Input from "./input";
+import Input from "./Input";
 import { FormFiledProps } from "@/types";
 
 const FormFiled = ({ label, name, type, placeholder }: FormFiledProps) => {

@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
     background: none;
   }
   
-  body{
+  *{
     font-family: 'Noto Sans KR', sans-serif;
   }
 
@@ -68,6 +68,10 @@ const GlobalStyle = createGlobalStyle`
     --color-gray-light-2: #ffffff99;
 
     --color-black-light: #222426;
+
+    --color-blue: #8dbdeb;
+    --color-blue-light: #bdd7f0;
+
   }
 `;
 

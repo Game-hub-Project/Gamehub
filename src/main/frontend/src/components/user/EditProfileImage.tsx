@@ -41,8 +41,7 @@ const ProfileImageSection = styled.div`
   img {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    overflow: hidden;
+    border-radius: 15px;
   }
 `;
 
