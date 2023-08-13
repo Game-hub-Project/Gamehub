@@ -3,7 +3,7 @@ import { userKey, editUserInfo } from "@/types";
 import { EditUserInfoValidate } from "@/utils/validate";
 import FormFiled from "@/components/common/FormField";
 import FormButton from "@/components/common/FormButton";
-import { SpaceLine } from "@/components/user/user.style";
+import { LogoutButton, SpaceLine } from "@/components/user/user.style";
 import EditProfileImage from "@/components/user/EditProfileImage";
 import ValidErrorMessage from "@/components/common/ValidErrorMessage";
 
@@ -64,6 +64,8 @@ const UserPage = () => {
       >
         수정하기
       </FormButton>
+
+      <LogoutButton>로그아웃</LogoutButton>
     </>
   );
 };

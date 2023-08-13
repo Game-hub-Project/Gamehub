@@ -23,7 +23,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <>
       <PageTitle>로그인</PageTitle>
       <FormFiled
         name="email"
@@ -45,7 +45,7 @@ const LoginPage = () => {
         로그인 하기
       </FormButton>
       <SignUpLink />
-    </div>
+    </>
   );
 };
 

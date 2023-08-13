@@ -9,7 +9,7 @@ const Input = styled.input`
   border: 1px solid var(--color-main);
 
   &:focus {
-    outline: 3px solid var(--color-sub);
+    outline: 3px solid var(--color-sub-2);
   }
 `;
 

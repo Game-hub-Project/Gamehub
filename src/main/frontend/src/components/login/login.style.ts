@@ -7,7 +7,9 @@ export const Container = styled.div`
   padding: 10px 0;
 `;
 
-export const SignUpMessage = styled.p``;
+export const SignUpMessage = styled.p`
+  font-weight: 300;
+`;
 
 export const SignUpButton = styled(Link)`
   color: var(--color-main);

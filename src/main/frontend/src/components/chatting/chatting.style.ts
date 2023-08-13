@@ -92,4 +92,8 @@ export const PostButton = styled.button`
   height: 120px;
   color: white;
   background-color: var(--color-main);
+
+  &:hover {
+    background-color: var(--color-sub);
+  }
 `;

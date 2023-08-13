@@ -10,7 +10,7 @@ import {
 const MessageBox = ({ isMe }: { isMe: boolean }) => {
   return (
     <MessageBoxStyle $isMe={isMe}>
-      <Profile src="img/logo.png" alt="프로필 이미지" />
+      <Profile src="img/logo-2.png" alt="프로필 이미지" />
       <div>
         <Nickname $isMe={isMe}>이준석</Nickname>
         <MessageWrap $isMe={isMe}>

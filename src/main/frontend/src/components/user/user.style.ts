@@ -1,4 +1,5 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
+import FormButton from "../common/FormButton";
 
 export const ProfileEditor = styled.div`
   margin: 20px 20px 40px;
@@ -30,12 +31,25 @@ export const ProfileImageSection = styled.div`
 
 export const ProfileImageButton = styled.button<{ $isChange: boolean }>`
   font-size: 14px;
+  font-weight: 300;
   color: white;
   border-radius: 8px;
   padding: 10px 20px;
   margin: 0 5px;
-  background-color: ${({ $isChange }) =>
-    $isChange ? "var(--color-main)" : "var(--color-gray)"};
+  ${({ $isChange }) =>
+    $isChange
+      ? css`
+          background-color: var(--color-main);
+          &:hover {
+            background-color: var(--color-sub);
+          }
+        `
+      : css`
+          background-color: var(--color-gray);
+          &:hover {
+            background-color: var(--color-gray-light-3);
+          }
+        `}
 `;
 
 export const ImgFile = styled.input`
@@ -48,4 +62,13 @@ export const SpaceLine = styled.hr`
   width: 416px;
   right: 0;
   top: 185px;
+`;
+
+export const LogoutButton = styled(FormButton)`
+  background-color: var(--color-gray);
+  margin-top: 10px;
+
+  &:hover {
+    background-color: var(--color-gray-light-3);
+  }
 `;

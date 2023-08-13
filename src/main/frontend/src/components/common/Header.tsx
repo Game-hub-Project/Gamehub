@@ -31,6 +31,10 @@ const HeaderStyle = styled.header`
   text-align: center;
   padding: 10px 30px;
   z-index: 10;
+
+  svg {
+    cursor: pointer;
+  }
 `;
 
 const Logo = styled.img`
