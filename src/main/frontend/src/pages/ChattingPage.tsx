@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import Date from "@/components/chatting/Date";
 import MessageBox from "@/components/chatting/MessageBox";
 import PostMessage from "@/components/chatting/PostMessage";
+
 const ChattingPage = () => {
   return (
     <BackGround>

@@ -8,7 +8,7 @@ const FormButton = styled.button`
   color: white;
   border-radius: 8px;
   margin: auto;
-  margin-top: 70px;
+  margin-top: 60px;
   margin-bottom: 30px;
 `;
 export default FormButton;
