@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 const FormButton = styled.button`
   display: block;
-  width: 300px;
+  width: 380px;
   height: 40px;
   background-color: var(--color-main);
   color: white;

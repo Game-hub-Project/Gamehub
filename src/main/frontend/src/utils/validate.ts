@@ -67,7 +67,7 @@ export const EditUserInfoValidate = (
   editUserInfo: editUserInfo,
   serValidateError: React.Dispatch<React.SetStateAction<string>>
 ) => {
-  const { nickname, password, confirmPassword, phone } = editUserInfo;
+  const { nickname, password, confirmPassword } = editUserInfo;
 
   // 닉네임 유효성 평가
   if (nameValidate(nickname)) {
@@ -87,11 +87,6 @@ export const EditUserInfoValidate = (
     return;
   }
 
-  // 전화번호 유효성 평가
-  if (phonedValidate(phone)) {
-    serValidateError(errors.phone);
-    return;
-  }
   serValidateError("");
 };
 

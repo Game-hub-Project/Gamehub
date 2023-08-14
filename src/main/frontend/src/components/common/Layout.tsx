@@ -29,9 +29,9 @@ const BackGround = styled.div`
 `;
 
 const LayoutStyle = styled.div`
-  width: 420px;
+  width: 480px;
   background-color: white;
-  margin-left: 60%;
+  margin-left: 55%;
 
   @media (max-width: 768px) {
     background-color: var(--color-gray-light);

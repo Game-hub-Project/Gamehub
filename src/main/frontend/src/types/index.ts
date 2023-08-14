@@ -27,5 +27,4 @@ export interface editUserInfo {
   nickname: string;
   password: string;
   confirmPassword: string;
-  phone: string;
 }
