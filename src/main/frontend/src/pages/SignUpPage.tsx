@@ -59,7 +59,7 @@ const SignUpPage = () => {
       />
       <FormFiled
         name="confirmPassword"
-        type="text"
+        type="password"
         placeholder="특수문자, 문자, 숫자 포함 8~15자"
         value={confirmPassword}
         onChange={setSignUPInfoFunc}
