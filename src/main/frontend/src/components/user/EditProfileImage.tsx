@@ -36,7 +36,12 @@ const EditProfileImage = () => {
         <div>
           <ProfileImageButton $isChange={false}>
             <label htmlFor="file">프로필 선택</label>
-            <ImgFile type="file" onChange={fileHandler} id="file" />
+            <ImgFile
+              type="file"
+              onChange={fileHandler}
+              id="file"
+              accept="image/jpeg, image/png"
+            />
           </ProfileImageButton>
           <ProfileImageButton $isChange={false} onClick={deleteImage}>
             기본이미지
