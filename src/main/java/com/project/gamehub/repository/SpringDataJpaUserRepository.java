@@ -1,14 +1,12 @@
 package com.project.gamehub.repository;
 
 import com.project.gamehub.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
 import java.util.Optional;
 
-public interface UserRepository {
-    User save(User user);
-    Optional<User> findById(Long id);
+public interface SpringDataJpaUserRepository extends JpaRepository<User, Long>, UserRepository {
+    @Override
     Optional<User> findByNickname(String nickname);
     Optional<User> findByEmail(String email);
-    List<User> findAll();
 }

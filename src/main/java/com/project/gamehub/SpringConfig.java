@@ -1,7 +1,11 @@
 package com.project.gamehub;
 
-import com.project.gamehub.repository.UserRepository;
+import com.project.gamehub.repository.*;
+import com.project.gamehub.service.UserService;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class SpringConfig {
 
     private final UserRepository userRepository;
@@ -10,5 +14,8 @@ public class SpringConfig {
         this.userRepository = userRepository;
     }
 
-
+    @Bean
+    public UserService userService() {
+        return new UserService(userRepository);
+    }
 }
