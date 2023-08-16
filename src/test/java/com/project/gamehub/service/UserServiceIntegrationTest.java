@@ -21,11 +21,12 @@ public class UserServiceIntegrationTest {
     void join() {
         //given
         User user = new User();
-        user.setEmail("test@test.com");
+        user.setEmail("test1@test.com");
         user.setName("spring");
         user.setNickname("hello");
         user.setPassword("test1234");
         user.setPhoneNumber("01011112222");
+        user.setProfile("test.png");
 
         //when
         Long saveId = userService.insertUser(user);
@@ -38,10 +39,10 @@ public class UserServiceIntegrationTest {
     @Test
     void checkDuplicateUser() {
         User user1 = new User();
-        user1.setEmail("test@test.com");
+        user1.setEmail("test3@test.com");
 
         User user2 = new User();
-        user2.setEmail("test@test.com");
+        user2.setEmail("test4@test.com");
 
         userService.insertUser(user1);
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> userService.insertUser(user2));
