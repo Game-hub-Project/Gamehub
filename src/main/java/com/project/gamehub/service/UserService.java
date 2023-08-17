@@ -1,24 +1,28 @@
 package com.project.gamehub.service;
 
 import com.project.gamehub.domain.User;
+import com.project.gamehub.dto.UserDTO;
 import com.project.gamehub.repository.UserRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Transactional
+@Service
+@AllArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    private final PasswordEncoder passwordEncoder;
 
     //회원가입
-    public Long insertUser(User user) {
-        userRepository.save(user);
-        return user.getId();
+    public String join(UserDTO userDTO) {
+        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        userRepository.save(userDTO.toEntity());
+        return userDTO.getEmail();
     }
 
     private void validateDuplicateUser(User user) {
@@ -36,5 +40,10 @@ public class UserService {
     //개별 회원 조회(ID로)
     public Optional<User> findOne(Long userId) {
         return userRepository.findById(userId);
+    }
+
+    //개별 회원 조회(이메일로)
+    public Optional<User> findByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 }

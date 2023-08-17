@@ -1,4 +1,4 @@
-package com.project.gamehub;
+package com.project.gamehub.config;
 
 import com.project.gamehub.repository.*;
 import com.project.gamehub.service.UserService;
