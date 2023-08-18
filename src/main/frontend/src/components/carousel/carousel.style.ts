@@ -42,5 +42,6 @@ export const ArrowBox = styled.div`
     border: 2px solid var(--color-gray);
     border-radius: 50%;
     padding: 2px;
+    cursor: pointer;
   }
 `;
