@@ -23,8 +23,8 @@ export const ProfileImageSection = styled.div`
   padding: 20px 10px;
 
   img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 15px;
   }
 `;
@@ -59,7 +59,7 @@ export const ImgFile = styled.input`
 export const SpaceLine = styled.hr`
   border: 1px solid #e7e7e7;
   position: absolute;
-  width: 416px;
+  width: 478px;
   right: 0;
   top: 185px;
 `;

@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 
 const FormButton = styled.button`
   display: block;
-  width: 300px;
-  height: 40px;
+  width: 380px;
+  height: 45px;
   background-color: var(--color-main);
   color: white;
   border-radius: 8px;

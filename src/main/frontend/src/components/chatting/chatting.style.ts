@@ -75,7 +75,7 @@ export const PostMessageStyle = styled.div`
 
 export const InputStyle = styled.textarea`
   box-sizing: border-box;
-  width: 90%;
+  width: 85%;
   height: 120px;
   padding: 10px;
   border: none;
@@ -88,7 +88,7 @@ export const InputStyle = styled.textarea`
 `;
 
 export const PostButton = styled.button`
-  width: 10%;
+  width: 15%;
   height: 120px;
   color: white;
   background-color: var(--color-main);

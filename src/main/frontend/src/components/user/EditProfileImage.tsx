@@ -23,6 +23,10 @@ const EditProfileImage = () => {
     }
   };
 
+  const deleteImage = () => {
+    setUserProfile("");
+  };
+
   return (
     <ProfileEditor>
       <h3>회원정보 수정</h3>
@@ -30,17 +34,20 @@ const EditProfileImage = () => {
       <ProfileImageSection>
         <img src={userProfile || "img/logo-2.png"} alt="프로필 이미지" />
         <div>
-          <ProfileImageButton $isChange={true}>
-            <label htmlFor="file">사진 변경</label>
-            <ImgFile type="file" onChange={fileHandler} id="file" />
+          <ProfileImageButton $isChange={false}>
+            <label htmlFor="file">프로필 선택</label>
+            <ImgFile
+              type="file"
+              onChange={fileHandler}
+              id="file"
+              accept="image/jpeg, image/png"
+            />
           </ProfileImageButton>
-          <ProfileImageButton
-            $isChange={false}
-            onClick={() => {
-              setUserProfile("");
-            }}
-          >
-            사진 제거
+          <ProfileImageButton $isChange={false} onClick={deleteImage}>
+            기본이미지
+          </ProfileImageButton>
+          <ProfileImageButton $isChange={true} onClick={deleteImage}>
+            변경
           </ProfileImageButton>
         </div>
       </ProfileImageSection>

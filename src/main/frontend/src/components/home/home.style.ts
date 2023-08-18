@@ -1,10 +1,11 @@
 import { styled } from "styled-components";
 
+// CategoryList컴포넌트 사용
 export const CategoryList = styled.ul`
   display: flex;
   justify-content: space-around;
   width: 90%;
-  margin: auto;
+  margin: 10px auto;
   padding: 10px;
   font-size: 15px;
   font-weight: 300;
@@ -16,6 +17,7 @@ export const CategoryList = styled.ul`
   }
 `;
 
+// ChatList컴포넌트 사용
 export const ChatListStyle = styled.ul`
   display: grid;
   place-items: center;
@@ -23,6 +25,7 @@ export const ChatListStyle = styled.ul`
   gap: 10px;
 `;
 
+// ChatListItem컴포넌트 사용
 export const ListStyle = styled.li`
   display: flex;
   flex-direction: column;

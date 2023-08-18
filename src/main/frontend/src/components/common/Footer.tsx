@@ -32,7 +32,7 @@ const FooterStyle = styled.footer`
 `;
 
 const Logo = styled.img`
-  width: 100px;
+  width: 110px;
   border-radius: 10px;
   position: absolute;
   right: 10px;
