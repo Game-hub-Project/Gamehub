@@ -11,8 +11,9 @@ export interface userInfo {
   nickname: string;
   email: string;
   password: string;
-  confirmPassword: string;
-  phone: string;
+  confirmPassword?: string;
+  phone_number: string;
+  profile: string;
 }
 
 export type userKey =
@@ -21,10 +22,11 @@ export type userKey =
   | "email"
   | "password"
   | "confirmPassword"
-  | "phone";
+  | "phone_number";
 
 export interface editUserInfo {
   nickname: string;
   password: string;
   confirmPassword: string;
+  phone_number: string;
 }
