@@ -23,25 +23,6 @@ public class User {
     private String name;
     private String nickname;
     private String password;
-    private String phoneNumber;
+    private String phone_number;
     private String profile;
-
-    @Builder
-    public User(
-            Long id,
-            String email,
-            String name,
-            String nickname,
-            String password,
-            String phoneNumber,
-            String profile
-    ) {
-        this.id = id;
-        this.email = email;
-        this.name = name;
-        this.nickname = nickname;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-        this.profile = profile;
-    }
 }

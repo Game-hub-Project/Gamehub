@@ -13,15 +13,4 @@ public class UserDTO {
     private String phoneNumber;
     private String profile;
 
-    public User toEntity() {
-        return User.builder()
-                .id(id)
-                .email(email)
-                .name(name)
-                .nickname(nickname)
-                .password(password)
-                .phoneNumber(phoneNumber)
-                .profile(profile)
-                .build();
-    }
 }

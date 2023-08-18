@@ -5,24 +5,23 @@ import com.project.gamehub.dto.UserDTO;
 import com.project.gamehub.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Transactional
-@Service
-@AllArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     //회원가입
-    public String join(UserDTO userDTO) {
-        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-        userRepository.save(userDTO.toEntity());
-        return userDTO.getEmail();
+    public String join(User user) {
+        userRepository.save(user);
+        return user.getEmail();
     }
 
     private void validateDuplicateUser(User user) {
