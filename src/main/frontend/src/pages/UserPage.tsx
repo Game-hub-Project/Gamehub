@@ -12,12 +12,12 @@ const UserPage = () => {
     nickname: "",
     password: "",
     confirmPassword: "",
-    phone: "",
+    phone_number: "",
   });
 
   const [validateError, serValidateError] = useState("");
 
-  const { nickname, password, confirmPassword, phone } = editUserInfo;
+  const { nickname, password, confirmPassword, phone_number } = editUserInfo;
 
   const setEditUserInfoFunc = useCallback((value: string, key?: userKey) => {
     if (!key) return;
@@ -50,10 +50,10 @@ const UserPage = () => {
         onChange={setEditUserInfoFunc}
       />
       <FormFiled
-        name="phone"
+        name="phone_number"
         type="tel"
         placeholder="01011112222"
-        value={phone}
+        value={phone_number}
         onChange={setEditUserInfoFunc}
       />
       <ValidErrorMessage>{validateError}</ValidErrorMessage>

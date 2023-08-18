@@ -21,7 +21,7 @@ const FormFiled = ({
         placeholder={placeholder}
         value={value}
         maxLength={
-          name === "phone"
+          name === "phone_number"
             ? 13
             : name === "password"
             ? 15
@@ -30,7 +30,7 @@ const FormFiled = ({
             : undefined
         }
         onChange={(e) => {
-          if (name === "phone") {
+          if (name === "phone_number") {
             e.target.value = autoHyphen(e.target.value);
           }
           onChange(e.target.value, name);
@@ -64,7 +64,7 @@ const labelText = (name: userKey) => {
       return "비밀번호";
     case "confirmPassword":
       return "비밀번호 확인";
-    case "phone":
+    case "phone_number":
       return "전화번호";
     default:
       "";

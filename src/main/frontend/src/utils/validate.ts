@@ -22,7 +22,7 @@ export const SignupValidate = (
   signUPInfo: userInfo,
   serValidateError: React.Dispatch<React.SetStateAction<string>>
 ) => {
-  const { name, nickname, email, password, confirmPassword, phone } =
+  const { name, nickname, email, password, confirmPassword, phone_number } =
     signUPInfo;
 
   // 이름 유효성 평가
@@ -50,24 +50,26 @@ export const SignupValidate = (
   }
 
   // 비밀번호 확인 유효성 평가
-  if (confirmPasswordValidate(confirmPassword, password)) {
+  if (confirmPasswordValidate(confirmPassword || "", password)) {
     serValidateError(errors.confirmPassword);
     return;
   }
 
   // 전화번호 유효성 평가
-  if (phonedValidate(phone)) {
-    serValidateError(errors.phone);
+  if (phone_numberdValidate(phone_number)) {
+    serValidateError(errors.phone_number);
     return;
   }
   serValidateError("");
+
+  return true;
 };
 
 export const EditUserInfoValidate = (
   editUserInfo: editUserInfo,
   serValidateError: React.Dispatch<React.SetStateAction<string>>
 ) => {
-  const { nickname, password, confirmPassword, phone } = editUserInfo;
+  const { nickname, password, confirmPassword, phone_number } = editUserInfo;
 
   // 닉네임 유효성 평가
   if (nameValidate(nickname)) {
@@ -88,8 +90,8 @@ export const EditUserInfoValidate = (
   }
 
   // 전화번호 유효성 평가
-  if (phonedValidate(phone)) {
-    serValidateError(errors.phone);
+  if (phone_numberdValidate(phone_number)) {
+    serValidateError(errors.phone_number);
     return;
   }
   serValidateError("");
@@ -122,9 +124,9 @@ const confirmPasswordValidate = (value: string, password: string) => {
   }
 };
 
-const phonedValidate = (value: string) => {
-  const isPhoneValid = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
-  if (!isPhoneValid.test(value) || value.length < 1) {
+const phone_numberdValidate = (value: string) => {
+  const isphone_numberValid = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+  if (!isphone_numberValid.test(value) || value.length < 1) {
     return true;
   }
 };
@@ -135,5 +137,5 @@ const errors = {
   email: "이메일을 확인해주세요",
   password: "비밀번호를 확인해주세요",
   confirmPassword: "비밀번호가 일치하지 않습니다.",
-  phone: "전화번호를 확인해주세요",
+  phone_number: "전화번호를 확인해주세요",
 };

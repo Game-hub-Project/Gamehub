@@ -5,6 +5,7 @@ import PageTitle from "@/components/common/PageTitle";
 import FormFiled from "@/components/common/FormField";
 import FormButton from "@/components/common/FormButton";
 import ValidErrorMessage from "@/components/common/ValidErrorMessage";
+import { postUser } from "@/api/user";
 
 const SignUpPage = () => {
   const [signUPInfo, setSignUPInfo] = useState<userInfo>({
@@ -13,12 +14,13 @@ const SignUpPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    phone: "",
+    phone_number: "",
+    profile: "",
   });
 
   const [validateError, serValidateError] = useState("");
 
-  const { name, nickname, email, password, confirmPassword, phone } =
+  const { name, nickname, email, password, confirmPassword, phone_number } =
     signUPInfo;
 
   const setSignUPInfoFunc = useCallback((value: string, key?: userKey) => {
@@ -61,21 +63,25 @@ const SignUpPage = () => {
         name="confirmPassword"
         type="password"
         placeholder="특수문자, 문자, 숫자 포함 8~15자"
-        value={confirmPassword}
+        value={confirmPassword || ""}
         onChange={setSignUPInfoFunc}
       />
       <FormFiled
-        name="phone"
-        type="text"
+        name="phone_number"
+        type="tel"
         placeholder="01011112222"
-        value={phone}
+        value={phone_number}
         onChange={setSignUPInfoFunc}
       />
       <ValidErrorMessage>{validateError}</ValidErrorMessage>
       <FormButton
         type="button"
         onClick={() => {
-          SignupValidate(signUPInfo, serValidateError);
+          if (SignupValidate(signUPInfo, serValidateError)) {
+            const copyData = { ...signUPInfo };
+            delete copyData.confirmPassword;
+            postUser(copyData);
+          }
         }}
       >
         가입하기
