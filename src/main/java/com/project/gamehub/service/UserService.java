@@ -1,10 +1,7 @@
 package com.project.gamehub.service;
 
 import com.project.gamehub.domain.User;
-import com.project.gamehub.dto.UserDTO;
 import com.project.gamehub.repository.UserRepository;
-import lombok.AllArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -37,7 +34,7 @@ public class UserService {
      }
 
     //개별 회원 조회(ID로)
-    public Optional<User> findOne(Long userId) {
+    public Optional<User> findById(Long userId) {
         return userRepository.findById(userId);
     }
 

@@ -1,4 +1,4 @@
-package com.project.gamehub.Controller;
+package com.project.gamehub.controller;
 
 import com.project.gamehub.domain.User;
 import com.project.gamehub.service.UserService;
