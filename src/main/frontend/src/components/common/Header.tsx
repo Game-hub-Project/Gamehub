@@ -5,14 +5,16 @@ import { ReactComponent as UserIcon } from "@/assets/UserIcon.svg";
 
 const Header = () => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+
   return (
     <HeaderStyle>
       <LeftArrowIcon onClick={() => navigate(-1)} />
       <Link to="/">
         <Logo src="img/logo.png" />
       </Link>
-      <Link to="/user">
-        <UserIcon />
+      <Link to={token ? "/user" : "/login"}>
+        <UserIcon fill={token ? "var(--color-main)" : "white"} />
       </Link>
     </HeaderStyle>
   );

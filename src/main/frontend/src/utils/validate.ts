@@ -16,6 +16,9 @@ export const LoginValidate = (
     serValidateError(errors.password);
     return;
   }
+  serValidateError("");
+
+  return true;
 };
 
 export const SignupValidate = (
