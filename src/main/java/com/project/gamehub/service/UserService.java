@@ -15,19 +15,6 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    //회원가입
-    public String join(User user) {
-        userRepository.save(user);
-        return user.getEmail();
-    }
-
-    private void validateDuplicateUser(User user) {
-        userRepository.findByEmail(user.getEmail())
-                .ifPresent(m -> {
-                    throw new IllegalStateException("이미 존재하는 회원입니다.");
-                });
-    }
-
     //전체 회원 조회
      public List<User> findUsers() {
         return userRepository.findAll();
@@ -42,4 +29,6 @@ public class UserService {
     public Optional<User> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+    
+    //회원정보 수정, 삭제 추가하기
 }
