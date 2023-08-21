@@ -1,5 +1,3 @@
-import { NavigateFunction } from "react-router-dom";
-
 export interface FormFiledProps {
   name: userKey;
   type: "text" | "email" | "password" | "tel";
@@ -36,5 +34,4 @@ export interface editUserInfo {
 export interface loginInfo {
   email: string;
   password: string;
-  navigate: NavigateFunction;
 }

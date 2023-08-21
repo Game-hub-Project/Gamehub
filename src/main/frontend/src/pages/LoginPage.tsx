@@ -23,7 +23,7 @@ const LoginPage = () => {
 
   const onClick = () => {
     if (LoginValidate(email, password, serValidateError)) {
-      login({ email, password, navigate });
+      login({ email, password }, navigate);
     }
   };
 

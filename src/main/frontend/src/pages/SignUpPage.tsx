@@ -6,6 +6,7 @@ import FormFiled from "@/components/common/FormField";
 import FormButton from "@/components/common/FormButton";
 import ValidErrorMessage from "@/components/common/ValidErrorMessage";
 import { postUser } from "@/api/user";
+import { useNavigate } from "react-router-dom";
 
 const SignUpPage = () => {
   const [signUPInfo, setSignUPInfo] = useState<userInfo>({
@@ -27,6 +28,8 @@ const SignUpPage = () => {
     if (!key) return;
     setSignUPInfo((prev) => ({ ...prev, [key]: value }));
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -80,7 +83,7 @@ const SignUpPage = () => {
           if (SignupValidate(signUPInfo, serValidateError)) {
             const copyData = { ...signUPInfo };
             delete copyData.confirmPassword;
-            postUser(copyData);
+            postUser(copyData, navigate);
           }
         }}
       >
