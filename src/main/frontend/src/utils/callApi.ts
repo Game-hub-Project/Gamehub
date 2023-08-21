@@ -3,7 +3,7 @@ const callApi = async (method: string, url: string, bodyData?: string) => {
     method,
     headers: {
       "Content-type": "application/json",
-      // Authorization: `Bearer ${localStorage.getItem("token")}`,
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
     ...(bodyData !== undefined && { body: bodyData }),
   });

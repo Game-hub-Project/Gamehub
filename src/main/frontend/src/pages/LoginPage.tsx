@@ -5,11 +5,14 @@ import FormFiled from "@/components/common/FormField";
 import PageTitle from "@/components/common/PageTitle";
 import SignUpLink from "@/components/login/SignUpLink";
 import ValidErrorMessage from "@/components/common/ValidErrorMessage";
+import { login } from "@/api/user";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [validateError, serValidateError] = useState("");
+  const navigate = useNavigate();
 
   const onChangeEmail = (value: string) => {
     setEmail(value);
@@ -19,7 +22,9 @@ const LoginPage = () => {
   };
 
   const onClick = () => {
-    LoginValidate(email, password, serValidateError);
+    if (LoginValidate(email, password, serValidateError)) {
+      login({ email, password, navigate });
+    }
   };
 
   return (

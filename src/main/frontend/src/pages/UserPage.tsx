@@ -6,6 +6,7 @@ import FormButton from "@/components/common/FormButton";
 import { LogoutButton, SpaceLine } from "@/components/user/user.style";
 import EditProfileImage from "@/components/user/EditProfileImage";
 import ValidErrorMessage from "@/components/common/ValidErrorMessage";
+import { useNavigate } from "react-router-dom";
 
 const UserPage = () => {
   const [editUserInfo, setEditUserInfo] = useState<editUserInfo>({
@@ -24,6 +25,7 @@ const UserPage = () => {
     setEditUserInfo((prev) => ({ ...prev, [key]: value }));
   }, []);
 
+  const navigate = useNavigate();
   return (
     <>
       <EditProfileImage />
@@ -65,7 +67,14 @@ const UserPage = () => {
         수정하기
       </FormButton>
 
-      <LogoutButton>로그아웃</LogoutButton>
+      <LogoutButton
+        onClick={() => {
+          localStorage.removeItem("token");
+          navigate("/");
+        }}
+      >
+        로그아웃
+      </LogoutButton>
     </>
   );
 };
