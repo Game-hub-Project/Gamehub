@@ -18,21 +18,6 @@ const SignUpPage = () => {
 
   const [validateError, serValidateError] = useState("");
 
-    const postUser = async () => {
-        console.log("회원가입");
-        fetch("http://localhost:8080/api/join", {
-            method: "POST",
-            body: JSON.stringify({
-                name: "이준석",
-                nickname: "준석",
-                email: "email@email.com",
-                password: "wnstjr6293!",
-                phone_number: "010-1234-1234",
-                profile: "test.png",
-            }),
-        });
-    };
-
   const { name, nickname, email, password, confirmPassword, phone } =
     signUPInfo;
 
@@ -90,8 +75,7 @@ const SignUpPage = () => {
       <FormButton
         type="button"
         onClick={() => {
-          //SignupValidate(signUPInfo, serValidateError);
-          postUser();
+          SignupValidate(signUPInfo, serValidateError);
         }}
       >
         가입하기
