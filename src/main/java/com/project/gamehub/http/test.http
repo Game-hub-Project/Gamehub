@@ -1,7 +1,7 @@
-POST http://localhost:8080/auth/reissue
+POST http://localhost:8080/auth/login
 Content-Type: application/json
 
 {
-  "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyMiIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE2OTI1MDQ1Nzh9.s9UFjuulXHteO5MvolX2MkREEDuguOsLXY5-Wc5m9b4",
-  "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTMxMDc1Nzh9.BUncatNkjBfB994LoBqUnGlJ0HZkc_Cn9RDGZme1IYA"
+  "email": "shinmin9812@naver.com",
+  "password": "test1234"
 }

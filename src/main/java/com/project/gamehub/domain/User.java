@@ -29,7 +29,7 @@ public class User extends Timestamped {
     private String password;
 
     @Column(nullable = false)
-    private String phoneNumber;
+    private String phone_number;
 
     @Column(nullable = false)
     private String profile;
@@ -38,13 +38,13 @@ public class User extends Timestamped {
     private Authority authority;
 
     @Builder
-    public User(Long id, String email, String name, String nickname, String password, String phoneNumber, String profile, Authority authority) {
+    public User(Long id, String email, String name, String nickname, String password, String phone_number, String profile, Authority authority) {
         this.id = id;
         this.email = email;
         this.name = name;
         this.nickname = nickname;
         this.password = password;
-        this.phoneNumber = phoneNumber;
+        this.phone_number = phone_number;
         this.profile = profile;
         this.authority = authority;
     }
