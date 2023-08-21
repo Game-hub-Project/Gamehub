@@ -3,5 +3,5 @@ import { userInfo } from "@/types";
 import callApi from "@/utils/callApi";
 
 export const postUser = async (data: userInfo) => {
-  await callApi("POST", API_PATH.USER, JSON.stringify(data));
+  await callApi("POST", API_PATH.USER_SIGNUP, JSON.stringify(data));
 };

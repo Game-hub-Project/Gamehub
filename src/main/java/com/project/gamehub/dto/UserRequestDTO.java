@@ -17,7 +17,7 @@ public class UserRequestDTO {
     private String name;
     private String nickname;
     private String password;
-    private String phoneNumber;
+    private String phone_number;
     private String profile;
 
     public User toUser(PasswordEncoder passwordEncoder) {
@@ -26,7 +26,7 @@ public class UserRequestDTO {
                 .name(name)
                 .nickname(nickname)
                 .password(passwordEncoder.encode(password))
-                .phoneNumber(phoneNumber)
+                .phone_number(phone_number)
                 .profile(profile)
                 .authority(Authority.ROLE_USER)
                 .build();
