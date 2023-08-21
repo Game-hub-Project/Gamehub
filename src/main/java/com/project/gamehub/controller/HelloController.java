@@ -1,4 +1,4 @@
-package com.project.gamehub.Controller;
+package com.project.gamehub.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
