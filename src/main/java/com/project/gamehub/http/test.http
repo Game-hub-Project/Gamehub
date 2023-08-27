@@ -1,6 +1,7 @@
-POST http://localhost:8080/chat
+POST http://localhost:8080/chat/room
 Content-Type: application/json
+Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyNCIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE2OTMxMzQwNjN9.ViO2ld2bU2AOnGAKVDDHRFuf_g0jeXljQZzEPYmko4g"
 
 {
-  "name": "test1"
+  "name": "test"
 }
