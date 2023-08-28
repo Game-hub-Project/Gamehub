@@ -26,6 +26,7 @@ public class ChatMessage {
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "room_id", referencedColumnName = "id")
     private ChatRoom chatRoom;
 
     @Builder
