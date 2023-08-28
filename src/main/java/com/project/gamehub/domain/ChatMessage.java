@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name = "ChatMessage")
 @Builder
 @NoArgsConstructor
 public class ChatMessage {
@@ -26,7 +27,7 @@ public class ChatMessage {
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "room_id", referencedColumnName = "id")
+    @JoinColumn(name = "room_id", referencedColumnName = "room_id")
     private ChatRoom chatRoom;
 
     @Builder

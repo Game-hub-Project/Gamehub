@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name = "ChatRoom")
 @Builder
 @NoArgsConstructor
 public class ChatRoom {
@@ -21,7 +22,7 @@ public class ChatRoom {
     private String name;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "game_id", referencedColumnName = "id")
+    @JoinColumn(name = "game_id", referencedColumnName = "game_id")
     private Game game;
 
     public ChatRoom(Long id, String name, Game game) {
